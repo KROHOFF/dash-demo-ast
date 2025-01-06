@@ -1,5 +1,6 @@
 import Background from "@/layouts/Background";
 import React from "react";
+import { Forms } from "./Forms";
 
 export default function Login() {
   return (
@@ -24,16 +25,17 @@ export default function Login() {
             </div>
           </div>
         </div>
-        <div className="w-2/3 flex flex-col justify-center">
-          <div className="flex justify-center mb-20">
+        <div className="w-2/3 flex flex-col">
+          <div className="flex justify-center my-20">
             <img className="h-20" src="logo.png" alt="Logo" />
           </div>
-          <h1 className="text-white text-center text-3xl font-bold">
-            Demo Dashboard AST
-          </h1>
-          <p className="text-white text-center text-xl font-light">
+          
+          <p className="text-neutral-400 text-center text-xs font-light mb-10">
             Ingresa tus credenciales para continuar
           </p>
+          <div className="z-20  mx-auto w-[300px]">
+            <Forms/>
+          </div>
         </div>
       </main>
     </div>
