@@ -2,6 +2,7 @@
 import { IconRefresh } from "justd-icons";
 import { Select, Checkbox, Button } from "@/components/ui";
 import { RiMapPin2Line, RiCheckboxBlankCircleFill } from "react-icons/ri";
+import { Graficos, GraficosPie,GraficosArcoiris, GraficosArcoCircular} from "@/components/charts/Graficos";
 
 export const centros = [
   { id: 1, name: "Becerra S23" },
@@ -11,6 +12,59 @@ export const centros = [
   { id: 5, name: "Santa Fe" },
   { id: 6, name: "Santa Rosa" },
 ];
+
+const data = [
+  { name: "07:00", ppm: "0.002", pv: 2400, amt: 2400 },
+  { name: "08:00", ppm: "0.007", pv: 1398, amt: 2210 },
+  { name: "09:00", ppm: "0.003", pv: 9800, amt: 2290 },
+  { name: "10:00", ppm: "0.002", pv: 3908, amt: 2000 },
+  { name: "11:00", ppm: "0.002", pv: 4800, amt: 2181 },
+];
+const data2 = [
+  { name: "07:00", ppm: "0.002", pv: 2400, amt: 2400 },
+  { name: "08:00", ppm: "0.002", pv: 1398, amt: 2210 },
+  { name: "09:00", ppm: "0.003", pv: 9800, amt: 2290 },
+  { name: "10:00", ppm: "0.002", pv: 3908, amt: 2000 },
+  { name: "11:00", ppm: "0.005", pv: 4800, amt: 2181 },
+];
+
+const data3 = [
+  { name: "07:00", ppm: "0.001", pv: 2400, amt: 2400 },
+  { name: "08:00", ppm: "0.005", pv: 1398, amt: 2210 },
+  { name: "09:00", ppm: "0.003", pv: 9800, amt: 2290 },
+  { name: "10:00", ppm: "0.007", pv: 3908, amt: 2000 },
+  { name: "11:00", ppm: "0.005", pv: 4800, amt: 2181 },
+];
+const data4 = [
+  { name: "07:00", ppm: "0.009", pv: 2400, amt: 2400 },
+  { name: "08:00", ppm: "0.002", pv: 1398, amt: 2210 },
+  { name: "09:00", ppm: "0.005", pv: 9800, amt: 2290 },
+  { name: "10:00", ppm: "0.007", pv: 3908, amt: 2000 },
+  { name: "11:00", ppm: "0.005", pv: 4800, amt: 2181 },
+];
+
+const data5 = [
+  { name: "07:00", ppm: "0.000", pv: 2400, amt: 2400 },
+  { name: "08:00", ppm: "0.000", pv: 1398, amt: 2210 },
+  { name: "09:00", ppm: "0.006", pv: 9800, amt: 2290 },
+  { name: "10:00", ppm: "0.001", pv: 3908, amt: 2000 },
+  { name: "11:00", ppm: "0.005", pv: 4800, amt: 2181 },
+];
+
+const dataPie = [
+  { name: "Centro A", value: 400 },
+  { name: "Centro B", value: 300 },
+  { name: "Centro C", value: 300 },
+  { name: "Centro D", value: 200 },
+];
+
+const dataArco = [
+  { name: 'Parte 1', value: 95 },
+  { name: 'Parte 2', value: 0 },
+  { name: 'Parte 3', value: 0 },
+  { name: 'Parte 4', value: 5 },
+];
+
 
 export default function Dashboard() {
   return (
@@ -211,8 +265,12 @@ export default function Dashboard() {
             </div>
           </div>
         </article>
-        <article>2</article>
-        <article>3</article>
+        <article>
+          <Graficos data={data3} />
+        </article>
+        <article>
+          <Graficos data={data} />
+        </article>
         <article>
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
             <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
@@ -318,8 +376,12 @@ export default function Dashboard() {
             </div>
           </div>
         </article>
-        <article>2</article>
-        <article>3</article>
+        <article>
+          <Graficos data={data2} />
+        </article>
+        <article>
+          <Graficos data={data4} />
+        </article>
         <article>
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
             <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
@@ -373,7 +435,7 @@ export default function Dashboard() {
         </article>
       </div>
       {/* Cuarta fila */}
-      <div className="grid grid-cols-4 max-h-40 gap-2 rounded-2xl border-t border-black/90  w-full bg-neutral-950/90 shadow shadow-neutral-700 overflow-hidden p-2">
+      <div className="grid grid-cols-4 max-h-24 gap-2 rounded-2xl border-t border-black/90  w-full bg-neutral-950/90 shadow shadow-neutral-700 overflow-hidden p-2">
         <article>
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
             <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
@@ -430,36 +492,20 @@ export default function Dashboard() {
                       <p className="text-xs text-neutral-400 ">01:50:12</p>
                     </td>
                   </tr>
-                  <tr className="border-b border-neutral-800">
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">2024/12/30</p>
-                    </td>
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">5,361 Kg</p>
-                    </td>
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">02:00:32</p>
-                    </td>
-                  </tr>
-                  <tr className="text-center border-b border-neutral-800">
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">2024/12/29</p>
-                    </td>
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">6,361 Kg</p>
-                    </td>
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">03:30:53</p>
-                    </td>
-                  </tr>
+                 
                 </tbody>
               </table>
             </div>
           </div>
         </article>
-        <article>2</article>
-        <article>3</article>
+        <article className="grid grid-cols-2">
+          {/* <GraficosPie data={dataPie} /> */}
+          <Graficos data={data} />
+        </article>
         <article>
+          <Graficos data={data5} />
+        </article>
+        <article >
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
             <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
               Balance de la Semana
@@ -515,28 +561,7 @@ export default function Dashboard() {
                       <p className="text-xs text-neutral-400 ">01:50:12</p>
                     </td>
                   </tr>
-                  <tr className="border-b border-neutral-800">
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">2024/12/30</p>
-                    </td>
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">5,361 Kg</p>
-                    </td>
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">02:00:32</p>
-                    </td>
-                  </tr>
-                  <tr className="text-center border-b border-neutral-800">
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">2024/12/29</p>
-                    </td>
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">6,361 Kg</p>
-                    </td>
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">03:30:53</p>
-                    </td>
-                  </tr>
+                 
                 </tbody>
               </table>
             </div>
