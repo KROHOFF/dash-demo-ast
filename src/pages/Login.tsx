@@ -6,13 +6,28 @@ export default function Login() {
     <div className="relative flex  h-screen w-full max-h-screen ">
       <Background />
       <main className="z-10 w-full h-full flex">
-        <div className="bg-rose-400 w-1/3 h-full flex flex-col justify-center items-center">
-            <img className="object-cover h-full" src="bg.jpeg" alt="" />
+        <div className="relative bg-rose-400 w-1/3 h-full flex flex-col justify-center items-center">
+          <img
+            className="absolute left-0 top-0 object-cover w-full h-full"
+            src="bg-4.jpeg"
+            alt=""
+          />
+          <div className="absolute  bg-neutral-900/20  backdrop-blur-md w-full h-full "></div>
+          <div className="absolute  bg-neutral-900/20 scale-95 backdrop-blur-3xl w-full h-full rounded-2xl flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center">
+              <p className="text-6xl font-bold text-neutral-400">
+                <span className="font-light text-red-500">WI</span>SENSOR
+              </p>
+              <p className="text-white text-center text-xl font-light">
+                AST NETWORKS
+              </p>
+            </div>
+          </div>
         </div>
         <div className="w-2/3 flex flex-col justify-center">
-        <div className="flex justify-center mb-20">
+          <div className="flex justify-center mb-20">
             <img className="h-20" src="logo.png" alt="Logo" />
-        </div>
+          </div>
           <h1 className="text-white text-center text-3xl font-bold">
             Demo Dashboard AST
           </h1>
