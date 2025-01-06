@@ -14,8 +14,8 @@ export const centros = [
 
 export default function Dashboard() {
   return (
-    <main className="w-full grid grid-rows-4 text-white gap-5">
-      <div className="grid grid-cols-6 gap-2 rounded-2xl  w-full bg-neutral-950/60 shadow shadow-neutral-700 overflow-hidden p-2">
+    <main className="w-full flex flex-col text-white gap-3">
+      <div className="grid grid-cols-6 gap-2 rounded-2xl border-t border-black/90 w-full bg-neutral-950/90 backdrop-blur-3xl shadow shadow-neutral-700 p-2">
         <article className="flex flex-col justify-start  shadow shadow-neutral-800 rounded-s-xl p-1">
           <div className="w-full grid grid-cols-2 border-b border-neutral-800 rounded-ss-lg">
             <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
@@ -33,7 +33,7 @@ export default function Dashboard() {
               CENTRO
             </h3>
             <div className=" flex flex-col gap-4 justify-center items-center">
-              <p className="border-dashed border-2 border-sky-500  text-sky-100 font-bold px-4 py-2 rounded-sm ">
+              <p className="border-dashed border-2 border-red-500  text-sky-100 font-bold px-4 py-2 rounded-sm ">
                 BECERRA S23
               </p>
               <p className="flex items-center gap-1  text-xs">
@@ -48,7 +48,7 @@ export default function Dashboard() {
         <article className="flex flex-col justify-start  shadow shadow-neutral-800  p-1">
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
             <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
-              Modulo
+              Módulo
             </h2>
           </div>
           <div className="grid grid-cols-2 gap-2 h-full justify-center p-2">
@@ -56,7 +56,7 @@ export default function Dashboard() {
               <p className="font-black text-2xl text-sky-500">M100</p>
             </article>
             <article className="flex flex-col justify-center items-center text-sky-500 font-semibold">
-              <button className="relative rounded-xl px-8 hover:bg-neutral-950 shadow shadow-sky-500 border border-sky-600 hover:border-sky-400 py-2">
+              <button className="relative rounded-xl px-8 hover:bg-neutral-950 shadow shadow-sky-500 border border-sky-600 hover:border-2 hover:border-sky-400 py-2">
                 Alertas
                 <span className="absolute  -top-2 -right-1 text-xs font-black border border-red-500   bg-red-500 px-1 rounded-lg text-white">
                   1
@@ -107,24 +107,23 @@ export default function Dashboard() {
             </div>
           </div>
         </article>
-
         <article className="flex flex-col justify-start  shadow shadow-neutral-800  p-1">
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
             <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
-              Modulo
+              Módulo
             </h2>
           </div>
           <div className="grid grid-cols-2 gap-2 h-full justify-center p-2">
-            <article className="border border-sky-500 flex justify-center items-center  rounded">
-              <p className="font-black text-2xl text-sky-500">M100</p>
-            </article>
             <article className="flex flex-col justify-center items-center text-sky-500 font-semibold">
-              <button className="relative rounded-xl px-8 hover:bg-neutral-950 shadow shadow-sky-500 border border-sky-600 hover:border-sky-400 py-2">
+              <button className="relative rounded-xl px-8 hover:bg-neutral-950 shadow shadow-sky-500 border border-sky-600 hover:border-2 hover:border-sky-400 py-2">
                 Alertas
                 <span className="absolute  -top-2 -right-1 text-xs font-black border border-red-500   bg-red-500 px-1 rounded-lg text-white">
                   1
                 </span>
               </button>
+            </article>
+            <article className="border border-sky-500 flex justify-center items-center  rounded">
+              <p className="font-black text-2xl text-sky-500">M100</p>
             </article>
           </div>
         </article>
@@ -145,7 +144,7 @@ export default function Dashboard() {
               CENTRO
             </h3>
             <div className=" flex flex-col gap-4 justify-center items-center">
-              <p className="border-dashed border-2 border-sky-500  text-sky-100 font-bold px-4 py-2 rounded-sm ">
+              <p className="border-dashed border-2 border-red-500  text-sky-100 font-bold px-4 py-2 rounded-sm ">
                 BECERRA S23
               </p>
               <p className="flex items-center gap-1  text-xs">
@@ -158,11 +157,111 @@ export default function Dashboard() {
           </div>
         </article>
       </div>
-      <div className="grid grid-cols-4 gap-2 rounded-2xl  w-full bg-neutral-950/60 shadow shadow-neutral-700 overflow-hidden p-2">
-        <article>1</article>
+      <div className="grid grid-cols-4 gap-2 rounded-2xl border-t border-black/90  w-full bg-neutral-950/90 shadow shadow-neutral-700 overflow-hidden p-2">
+        <article>
+          <div className="w-full grid grid-cols-1 border-b border-neutral-800">
+            <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
+              Información de la Jaula
+            </h2>
+          </div>
+          <div className="grid grid-cols-3 grid-rows-3  justify-center p-2">
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">Silo</p>
+              <h3 className="text-center font-bold text-neutral-300">
+                SILO 4B
+              </h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">Alimento</p>
+              <h3 className="text-center font-bold text-neutral-300">SKN9</h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">Cant.Peces</p>
+              <h3 className="text-center font-bold text-neutral-300">77374</h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">X Gramos</p>
+              <h3 className="text-center font-bold text-neutral-300">
+                6035.120
+              </h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">SFR</p>
+              <h3 className="text-center font-bold text-neutral-300">0.371%</h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">Pallet x KG</p>
+              <h3 className="text-center font-bold text-neutral-300">
+                1.700000
+              </h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 text-center">
+                Cant. Alimento
+              </p>
+              <h3 className="text-center font-bold text-neutral-300">1732kg</h3>
+            </div>
+            <div className="col-span-2 border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 text-center">
+                Vis. Planeadas
+              </p>
+              <h3 className="text-center font-bold text-neutral-300">-</h3>
+            </div>
+          </div>
+        </article>
         <article>2</article>
         <article>3</article>
-        <article>4</article>
+        <article>
+          <div className="w-full grid grid-cols-1 border-b border-neutral-800">
+            <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
+              Información de la Jaula
+            </h2>
+          </div>
+          <div className="grid grid-cols-3 grid-rows-3  justify-center p-2">
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">Silo</p>
+              <h3 className="text-center font-bold text-neutral-300">
+                SILO 4B
+              </h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">Alimento</p>
+              <h3 className="text-center font-bold text-neutral-300">SKN9</h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">Cant.Peces</p>
+              <h3 className="text-center font-bold text-neutral-300">77374</h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">X Gramos</p>
+              <h3 className="text-center font-bold text-neutral-300">
+                6035.120
+              </h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">SFR</p>
+              <h3 className="text-center font-bold text-neutral-300">0.371%</h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">Pallet x KG</p>
+              <h3 className="text-center font-bold text-neutral-300">
+                1.700000
+              </h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 text-center">
+                Cant. Alimento
+              </p>
+              <h3 className="text-center font-bold text-neutral-300">1732kg</h3>
+            </div>
+            <div className="col-span-2 border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 text-center">
+                Vis. Planeadas
+              </p>
+              <h3 className="text-center font-bold text-neutral-300">-</h3>
+            </div>
+          </div>
+        </article>
       </div>
     </main>
   );

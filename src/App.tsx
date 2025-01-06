@@ -9,7 +9,7 @@ function App() {
     <>
       <div className="relative flex  h-screen w-full max-h-screen ">
         <Background />
-        <main className="z-10 w-full">
+        <main className="z-10 w-full h-full">
           <Header />
           <div className="relative flex flex-row gap-2  justify-center items-stretch w-full py-5">
             <Sidebar />
