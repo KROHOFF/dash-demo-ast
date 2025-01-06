@@ -435,7 +435,7 @@ export default function Dashboard() {
         </article>
       </div>
       {/* Cuarta fila */}
-      <div className="grid grid-cols-4 max-h-40 gap-2 rounded-2xl border-t border-black/90  w-full bg-neutral-950/90 shadow shadow-neutral-700 overflow-hidden p-2">
+      <div className="grid grid-cols-4 max-h-24 gap-2 rounded-2xl border-t border-black/90  w-full bg-neutral-950/90 shadow shadow-neutral-700 overflow-hidden p-2">
         <article>
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
             <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
@@ -492,42 +492,20 @@ export default function Dashboard() {
                       <p className="text-xs text-neutral-400 ">01:50:12</p>
                     </td>
                   </tr>
-                  <tr className="border-b border-neutral-800">
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">2024/12/30</p>
-                    </td>
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">5,361 Kg</p>
-                    </td>
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">02:00:32</p>
-                    </td>
-                  </tr>
-                  <tr className="text-center border-b border-neutral-800">
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">2024/12/29</p>
-                    </td>
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">6,361 Kg</p>
-                    </td>
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">03:30:53</p>
-                    </td>
-                  </tr>
+                 
                 </tbody>
               </table>
             </div>
           </div>
         </article>
         <article className="grid grid-cols-2">
-          <GraficosArcoCircular data={dataArco} />
           {/* <GraficosPie data={dataPie} /> */}
           <Graficos data={data} />
         </article>
         <article>
           <Graficos data={data5} />
         </article>
-        <article>
+        <article >
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
             <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
               Balance de la Semana
@@ -583,28 +561,7 @@ export default function Dashboard() {
                       <p className="text-xs text-neutral-400 ">01:50:12</p>
                     </td>
                   </tr>
-                  <tr className="border-b border-neutral-800">
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">2024/12/30</p>
-                    </td>
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">5,361 Kg</p>
-                    </td>
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">02:00:32</p>
-                    </td>
-                  </tr>
-                  <tr className="text-center border-b border-neutral-800">
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">2024/12/29</p>
-                    </td>
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">6,361 Kg</p>
-                    </td>
-                    <td className="text-center">
-                      <p className="text-xs text-neutral-400 ">03:30:53</p>
-                    </td>
-                  </tr>
+                 
                 </tbody>
               </table>
             </div>
