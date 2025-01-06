@@ -15,6 +15,7 @@ export const centros = [
 export default function Dashboard() {
   return (
     <main className="w-full flex flex-col text-white gap-3">
+      {/* Primera fila */}
       <div className="grid grid-cols-6 gap-2 rounded-2xl border-t border-black/90 w-full bg-neutral-950/90 backdrop-blur-3xl shadow shadow-neutral-700 p-2">
         <article className="flex flex-col justify-start  shadow shadow-neutral-800 rounded-s-xl p-1">
           <div className="w-full grid grid-cols-2 border-b border-neutral-800 rounded-ss-lg">
@@ -157,6 +158,7 @@ export default function Dashboard() {
           </div>
         </article>
       </div>
+      {/* Segunda fila */}
       <div className="grid grid-cols-4 gap-2 rounded-2xl border-t border-black/90  w-full bg-neutral-950/90 shadow shadow-neutral-700 overflow-hidden p-2">
         <article>
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
@@ -259,6 +261,284 @@ export default function Dashboard() {
                 Vis. Planeadas
               </p>
               <h3 className="text-center font-bold text-neutral-300">-</h3>
+            </div>
+          </div>
+        </article>
+      </div>
+      {/* Tercera fila */}
+      <div className="grid grid-cols-4 gap-2 rounded-2xl border-t border-black/90  w-full bg-neutral-950/90 shadow shadow-neutral-700 overflow-hidden p-2">
+        <article>
+          <div className="w-full grid grid-cols-1 border-b border-neutral-800">
+            <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
+              Información de la Jaula
+            </h2>
+          </div>
+          <div className="grid grid-cols-3 grid-rows-3  justify-center p-2">
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">Silo</p>
+              <h3 className="text-center font-bold text-neutral-300">
+                SILO 4B
+              </h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">Alimento</p>
+              <h3 className="text-center font-bold text-neutral-300">SKN9</h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">Cant.Peces</p>
+              <h3 className="text-center font-bold text-neutral-300">77374</h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">X Gramos</p>
+              <h3 className="text-center font-bold text-neutral-300">
+                6035.120
+              </h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">SFR</p>
+              <h3 className="text-center font-bold text-neutral-300">0.371%</h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">Pallet x KG</p>
+              <h3 className="text-center font-bold text-neutral-300">
+                1.700000
+              </h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 text-center">
+                Cant. Alimento
+              </p>
+              <h3 className="text-center font-bold text-neutral-300">1732kg</h3>
+            </div>
+            <div className="col-span-2 border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 text-center">
+                Vis. Planeadas
+              </p>
+              <h3 className="text-center font-bold text-neutral-300">-</h3>
+            </div>
+          </div>
+        </article>
+        <article>2</article>
+        <article>3</article>
+        <article>
+          <div className="w-full grid grid-cols-1 border-b border-neutral-800">
+            <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
+              Información de la Jaula
+            </h2>
+          </div>
+          <div className="grid grid-cols-3 grid-rows-3  justify-center p-2">
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">Silo</p>
+              <h3 className="text-center font-bold text-neutral-300">
+                SILO 4B
+              </h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">Alimento</p>
+              <h3 className="text-center font-bold text-neutral-300">SKN9</h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">Cant.Peces</p>
+              <h3 className="text-center font-bold text-neutral-300">77374</h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">X Gramos</p>
+              <h3 className="text-center font-bold text-neutral-300">
+                6035.120
+              </h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">SFR</p>
+              <h3 className="text-center font-bold text-neutral-300">0.371%</h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 ">Pallet x KG</p>
+              <h3 className="text-center font-bold text-neutral-300">
+                1.700000
+              </h3>
+            </div>
+            <div className="border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 text-center">
+                Cant. Alimento
+              </p>
+              <h3 className="text-center font-bold text-neutral-300">1732kg</h3>
+            </div>
+            <div className="col-span-2 border border-neutral-950/70 px-3 py-2 bg-gradient-to-tr from-neutral-800 to-neutral-900 shadow shadow-neutral-700/90 hover:from-neutral-900 hover:to-neutral-800">
+              <p className="text-xs text-neutral-400 text-center">
+                Vis. Planeadas
+              </p>
+              <h3 className="text-center font-bold text-neutral-300">-</h3>
+            </div>
+          </div>
+        </article>
+      </div>
+      {/* Cuarta fila */}
+      <div className="grid grid-cols-4 max-h-40 gap-2 rounded-2xl border-t border-black/90  w-full bg-neutral-950/90 shadow shadow-neutral-700 overflow-hidden p-2">
+        <article>
+          <div className="w-full grid grid-cols-1 border-b border-neutral-800">
+            <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
+              Balance de la Semana
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 grid-rows-2  justify-center p-2">
+            <div className="border border-neutral-950/70">
+              <table className="table-auto w-full">
+                <thead className="text-center bg-neutral-700">
+                  <tr>
+                    <th className="text-center">
+                      <p className="text-xs text-neutral-400 ">Fecha</p>
+                    </th>
+                    <th className="text-center">
+                      <p className="text-xs text-neutral-400 ">Alimento (Kg)</p>
+                    </th>
+                    <th className="text-center">
+                      <p className="text-xs text-neutral-400 ">Alimentado</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="text-center border-b border-neutral-800">
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">2025/01/02</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">9,361 Kg</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">07:00:32</p>
+                    </td>
+                  </tr>
+                  <tr className="text-center border-b border-neutral-800">
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">2025/01/01</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">10,361 Kg</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">04:30:53</p>
+                    </td>
+                  </tr>
+                  <tr className="bg-neutral-950/90 text-center border-b border-neutral-800">
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">2024/12/31</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">4,361 Kg</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">01:50:12</p>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-neutral-800">
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">2024/12/30</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">5,361 Kg</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">02:00:32</p>
+                    </td>
+                  </tr>
+                  <tr className="text-center border-b border-neutral-800">
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">2024/12/29</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">6,361 Kg</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">03:30:53</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+        <article>2</article>
+        <article>3</article>
+        <article>
+          <div className="w-full grid grid-cols-1 border-b border-neutral-800">
+            <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
+              Balance de la Semana
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 grid-rows-2  justify-center p-2">
+            <div className="border border-neutral-950/70">
+              <table className="table-auto w-full">
+                <thead className="text-center bg-neutral-700">
+                  <tr>
+                    <th className="text-center">
+                      <p className="text-xs text-neutral-400 ">Fecha</p>
+                    </th>
+                    <th className="text-center">
+                      <p className="text-xs text-neutral-400 ">Alimento (Kg)</p>
+                    </th>
+                    <th className="text-center">
+                      <p className="text-xs text-neutral-400 ">Alimentado</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="text-center border-b border-neutral-800">
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">2025/01/02</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">9,361 Kg</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">07:00:32</p>
+                    </td>
+                  </tr>
+                  <tr className="text-center border-b border-neutral-800">
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">2025/01/01</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">10,361 Kg</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">04:30:53</p>
+                    </td>
+                  </tr>
+                  <tr className="bg-neutral-950/90 text-center border-b border-neutral-800">
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">2024/12/31</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">4,361 Kg</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">01:50:12</p>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-neutral-800">
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">2024/12/30</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">5,361 Kg</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">02:00:32</p>
+                    </td>
+                  </tr>
+                  <tr className="text-center border-b border-neutral-800">
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">2024/12/29</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">6,361 Kg</p>
+                    </td>
+                    <td className="text-center">
+                      <p className="text-xs text-neutral-400 ">03:30:53</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </article>
