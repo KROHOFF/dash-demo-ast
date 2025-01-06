@@ -13,6 +13,44 @@ export const centros = [
   { id: 6, name: "Santa Rosa" },
 ];
 
+const data = [
+  { name: '07:00', uv: '0.002', pv: 2400, amt: 2400 },
+  { name: '08:00', uv: '0.007', pv: 1398, amt: 2210 },
+  { name: '09:00', uv: '0.003', pv: 9800, amt: 2290 },
+  { name: '10:00', uv: '0.002', pv: 3908, amt: 2000 },
+  { name: '11:00', uv: '0.002', pv: 4800, amt: 2181 },
+];
+const data2 = [
+  { name: '07:00', uv: '0.002', pv: 2400, amt: 2400 },
+  { name: '08:00', uv: '0.002', pv: 1398, amt: 2210 },
+  { name: '09:00', uv: '0.003', pv: 9800, amt: 2290 },
+  { name: '10:00', uv: '0.002', pv: 3908, amt: 2000 },
+  { name: '11:00', uv: '0.005', pv: 4800, amt: 2181 },
+];
+
+const data3 = [
+  { name: '07:00', uv: '0.001', pv: 2400, amt: 2400 },
+  { name: '08:00', uv: '0.005', pv: 1398, amt: 2210 },
+  { name: '09:00', uv: '0.003', pv: 9800, amt: 2290 },
+  { name: '10:00', uv: '0.007', pv: 3908, amt: 2000 },
+  { name: '11:00', uv: '0.005', pv: 4800, amt: 2181 },
+];
+const data4 = [
+  { name: '07:00', uv: '0.009', pv: 2400, amt: 2400 },
+  { name: '08:00', uv: '0.002', pv: 1398, amt: 2210 },
+  { name: '09:00', uv: '0.005', pv: 9800, amt: 2290 },
+  { name: '10:00', uv: '0.007', pv: 3908, amt: 2000 },
+  { name: '11:00', uv: '0.005', pv: 4800, amt: 2181 },
+];
+
+const data5 = [
+  { name: '07:00', uv: '0.000', pv: 2400, amt: 2400 },
+  { name: '08:00', uv: '0.000', pv: 1398, amt: 2210 },
+  { name: '09:00', uv: '0.006', pv: 9800, amt: 2290 },
+  { name: '10:00', uv: '0.001', pv: 3908, amt: 2000 },
+  { name: '11:00', uv: '0.005', pv: 4800, amt: 2181 },
+];
+
 export default function Dashboard() {
   return (
     <main className="w-full flex flex-col text-white gap-3">
@@ -213,10 +251,10 @@ export default function Dashboard() {
           </div>
         </article>
         <article>
-          <Graficos />
+          <Graficos data={data3} />
         </article>
         <article>
-          <Graficos />
+          <Graficos data={data} />
         </article>
         <article>
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
@@ -324,10 +362,10 @@ export default function Dashboard() {
           </div>
         </article>
         <article>
-          <Graficos />
+          <Graficos data={data2} />
         </article>
         <article>
-          <Graficos />
+          <Graficos data={data4} />
         </article>
         <article>
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
@@ -467,10 +505,10 @@ export default function Dashboard() {
           </div>
         </article>
         <article>
-          <Graficos />
+          <Graficos data={data} />
         </article>
         <article>
-          <Graficos />
+          <Graficos data={data5} />
         </article>
         <article>
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
