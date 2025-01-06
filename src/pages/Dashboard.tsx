@@ -2,6 +2,7 @@
 import { IconRefresh } from "justd-icons";
 import { Select, Checkbox, Button } from "@/components/ui";
 import { RiMapPin2Line, RiCheckboxBlankCircleFill } from "react-icons/ri";
+import Graficos from "@/components/charts/Graficos";
 
 export const centros = [
   { id: 1, name: "Becerra S23" },
@@ -211,8 +212,12 @@ export default function Dashboard() {
             </div>
           </div>
         </article>
-        <article>2</article>
-        <article>3</article>
+        <article>
+          <Graficos />
+        </article>
+        <article>
+          <Graficos />
+        </article>
         <article>
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
             <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
@@ -318,8 +323,12 @@ export default function Dashboard() {
             </div>
           </div>
         </article>
-        <article>2</article>
-        <article>3</article>
+        <article>
+          <Graficos />
+        </article>
+        <article>
+          <Graficos />
+        </article>
         <article>
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
             <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
@@ -457,8 +466,12 @@ export default function Dashboard() {
             </div>
           </div>
         </article>
-        <article>2</article>
-        <article>3</article>
+        <article>
+          <Graficos />
+        </article>
+        <article>
+          <Graficos />
+        </article>
         <article>
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
             <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
