@@ -2,7 +2,7 @@
 import { IconRefresh } from "justd-icons";
 import { Select, Checkbox, Button } from "@/components/ui";
 import { RiMapPin2Line, RiCheckboxBlankCircleFill } from "react-icons/ri";
-import Graficos from "@/components/charts/Graficos";
+import { Graficos, GraficosPie,GraficosArcoiris, GraficosArcoCircular} from "@/components/charts/Graficos";
 
 export const centros = [
   { id: 1, name: "Becerra S23" },
@@ -14,42 +14,57 @@ export const centros = [
 ];
 
 const data = [
-  { name: '07:00', uv: '0.002', pv: 2400, amt: 2400 },
-  { name: '08:00', uv: '0.007', pv: 1398, amt: 2210 },
-  { name: '09:00', uv: '0.003', pv: 9800, amt: 2290 },
-  { name: '10:00', uv: '0.002', pv: 3908, amt: 2000 },
-  { name: '11:00', uv: '0.002', pv: 4800, amt: 2181 },
+  { name: "07:00", ppm: "0.002", pv: 2400, amt: 2400 },
+  { name: "08:00", ppm: "0.007", pv: 1398, amt: 2210 },
+  { name: "09:00", ppm: "0.003", pv: 9800, amt: 2290 },
+  { name: "10:00", ppm: "0.002", pv: 3908, amt: 2000 },
+  { name: "11:00", ppm: "0.002", pv: 4800, amt: 2181 },
 ];
 const data2 = [
-  { name: '07:00', uv: '0.002', pv: 2400, amt: 2400 },
-  { name: '08:00', uv: '0.002', pv: 1398, amt: 2210 },
-  { name: '09:00', uv: '0.003', pv: 9800, amt: 2290 },
-  { name: '10:00', uv: '0.002', pv: 3908, amt: 2000 },
-  { name: '11:00', uv: '0.005', pv: 4800, amt: 2181 },
+  { name: "07:00", ppm: "0.002", pv: 2400, amt: 2400 },
+  { name: "08:00", ppm: "0.002", pv: 1398, amt: 2210 },
+  { name: "09:00", ppm: "0.003", pv: 9800, amt: 2290 },
+  { name: "10:00", ppm: "0.002", pv: 3908, amt: 2000 },
+  { name: "11:00", ppm: "0.005", pv: 4800, amt: 2181 },
 ];
 
 const data3 = [
-  { name: '07:00', uv: '0.001', pv: 2400, amt: 2400 },
-  { name: '08:00', uv: '0.005', pv: 1398, amt: 2210 },
-  { name: '09:00', uv: '0.003', pv: 9800, amt: 2290 },
-  { name: '10:00', uv: '0.007', pv: 3908, amt: 2000 },
-  { name: '11:00', uv: '0.005', pv: 4800, amt: 2181 },
+  { name: "07:00", ppm: "0.001", pv: 2400, amt: 2400 },
+  { name: "08:00", ppm: "0.005", pv: 1398, amt: 2210 },
+  { name: "09:00", ppm: "0.003", pv: 9800, amt: 2290 },
+  { name: "10:00", ppm: "0.007", pv: 3908, amt: 2000 },
+  { name: "11:00", ppm: "0.005", pv: 4800, amt: 2181 },
 ];
 const data4 = [
-  { name: '07:00', uv: '0.009', pv: 2400, amt: 2400 },
-  { name: '08:00', uv: '0.002', pv: 1398, amt: 2210 },
-  { name: '09:00', uv: '0.005', pv: 9800, amt: 2290 },
-  { name: '10:00', uv: '0.007', pv: 3908, amt: 2000 },
-  { name: '11:00', uv: '0.005', pv: 4800, amt: 2181 },
+  { name: "07:00", ppm: "0.009", pv: 2400, amt: 2400 },
+  { name: "08:00", ppm: "0.002", pv: 1398, amt: 2210 },
+  { name: "09:00", ppm: "0.005", pv: 9800, amt: 2290 },
+  { name: "10:00", ppm: "0.007", pv: 3908, amt: 2000 },
+  { name: "11:00", ppm: "0.005", pv: 4800, amt: 2181 },
 ];
 
 const data5 = [
-  { name: '07:00', uv: '0.000', pv: 2400, amt: 2400 },
-  { name: '08:00', uv: '0.000', pv: 1398, amt: 2210 },
-  { name: '09:00', uv: '0.006', pv: 9800, amt: 2290 },
-  { name: '10:00', uv: '0.001', pv: 3908, amt: 2000 },
-  { name: '11:00', uv: '0.005', pv: 4800, amt: 2181 },
+  { name: "07:00", ppm: "0.000", pv: 2400, amt: 2400 },
+  { name: "08:00", ppm: "0.000", pv: 1398, amt: 2210 },
+  { name: "09:00", ppm: "0.006", pv: 9800, amt: 2290 },
+  { name: "10:00", ppm: "0.001", pv: 3908, amt: 2000 },
+  { name: "11:00", ppm: "0.005", pv: 4800, amt: 2181 },
 ];
+
+const dataPie = [
+  { name: "Centro A", value: 400 },
+  { name: "Centro B", value: 300 },
+  { name: "Centro C", value: 300 },
+  { name: "Centro D", value: 200 },
+];
+
+const dataArco = [
+  { name: 'Parte 1', value: 95 },
+  { name: 'Parte 2', value: 0 },
+  { name: 'Parte 3', value: 0 },
+  { name: 'Parte 4', value: 5 },
+];
+
 
 export default function Dashboard() {
   return (
@@ -504,7 +519,9 @@ export default function Dashboard() {
             </div>
           </div>
         </article>
-        <article>
+        <article className="grid grid-cols-2">
+          <GraficosArcoCircular data={dataArco} />
+          {/* <GraficosPie data={dataPie} /> */}
           <Graficos data={data} />
         </article>
         <article>
