@@ -435,7 +435,7 @@ export default function Dashboard() {
         </article>
       </div>
       {/* Cuarta fila */}
-      <div className="grid grid-cols-4 max-h-24 gap-2 rounded-2xl border-t border-black/90  w-full bg-neutral-950/90 shadow shadow-neutral-700 overflow-hidden p-2">
+      <div className="grid grid-cols-4  gap-2 rounded-2xl border-t border-black/90  w-full bg-neutral-950/90 shadow shadow-neutral-700 overflow-hidden p-2">
         <article>
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
             <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
@@ -498,7 +498,7 @@ export default function Dashboard() {
             </div>
           </div>
         </article>
-        <article className="grid grid-cols-2">
+        <article className="">
           {/* <GraficosPie data={dataPie} /> */}
           <Graficos data={data} />
         </article>
