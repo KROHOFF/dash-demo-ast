@@ -1,6 +1,17 @@
-import React from 'react';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'; // Solo importa ResponsiveContainer una vez
-import PropTypes from 'prop-types';
+import React from "react";
+import {
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  PieChart,
+  Pie,
+  Cell,
+} from "recharts"; // Solo importa ResponsiveContainer una vez
+import PropTypes from "prop-types";
 
 // Componente de gráfico de área (AreaChart)
 export const Graficos = ({ data }) => (
@@ -10,7 +21,7 @@ export const Graficos = ({ data }) => (
       <XAxis dataKey="name" />
       <YAxis />
       <Tooltip />
-      <Area type="monotone" dataKey="ppm" stroke="#8884d8" fill="#8884d8" />
+      <Area type="monotone" dataKey="ppm" stroke="#0ea5e9" fill="#0955e9" />
     </AreaChart>
   </ResponsiveContainer>
 );
@@ -21,7 +32,9 @@ Graficos.propTypes = {
 
 // Componente de gráfico de pastel (PieChart)
 export const GraficosPie = ({ data }) => (
-  <ResponsiveContainer width="100%" height={123}> {/* Usamos el mismo ResponsiveContainer */}
+  <ResponsiveContainer width="100%" height={123}>
+    {" "}
+    {/* Usamos el mismo ResponsiveContainer */}
     <PieChart>
       <Pie
         data={data}
@@ -30,7 +43,7 @@ export const GraficosPie = ({ data }) => (
         cx="50%"
         cy="50%"
         outerRadius="80%"
-        fill="#8884d8"
+        fill="#0ea5e9"
         label
       />
       <Tooltip />
@@ -42,7 +55,6 @@ GraficosPie.propTypes = {
   data: PropTypes.array.isRequired, // Definimos que 'data' debe ser un array
 };
 
-
 export const GraficosArcoiris = ({ data }) => (
   <ResponsiveContainer width="100%" height={223}>
     <AreaChart data={data}>
@@ -51,22 +63,16 @@ export const GraficosArcoiris = ({ data }) => (
         <linearGradient id="arcoiris" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#FF0000" stopOpacity={0.5} />
           <stop offset="100%" stopColor="#FF0000" stopOpacity={0} />
-          
         </linearGradient>
       </defs>
-      
+
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" />
       <YAxis />
       <Tooltip />
-      
+
       {/* Usamos el gradiente arcoiris para el gráfico de área */}
-      <Area 
-        type="monotone" 
-        dataKey="ppm" 
-        stroke="#000" 
-        fill="#fff" 
-      />
+      <Area type="monotone" dataKey="ppm" stroke="#000" fill="#fff" />
     </AreaChart>
   </ResponsiveContainer>
 );
@@ -79,7 +85,6 @@ export const GraficosArcoCircular = ({ data }) => {
   // Definir los colores del arcoiris
   const rainbowColors = [
     "#000", // Rojo
-    
   ];
 
   return (
@@ -100,7 +105,10 @@ export const GraficosArcoCircular = ({ data }) => {
         >
           {/* Usar colores del arcoiris para las secciones */}
           {data.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={rainbowColors[index % rainbowColors.length]} />
+            <Cell
+              key={`cell-${index}`}
+              fill={rainbowColors[index % rainbowColors.length]}
+            />
           ))}
         </Pie>
       </PieChart>

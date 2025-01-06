@@ -7,7 +7,7 @@ import Dashboard from "./pages/Dashboard";
 function App() {
   return (
     <>
-      <div className="relative flex  h-screen w-full max-h-screen ">
+      <div className="relative flex   w-full  ">
         <Background />
         <main className="z-10 w-full h-full">
           <Header />
