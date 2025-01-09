@@ -2,7 +2,9 @@
 import { IconRefresh } from "justd-icons";
 import { Select, Checkbox, Button } from "@/components/ui";
 import { RiMapPin2Line, RiCheckboxBlankCircleFill } from "react-icons/ri";
-import { Graficos, GraficosPie,GraficosArcoiris, GraficosArcoCircular} from "@/components/charts/Graficos";
+import { Graficos } from "@/components/charts/Graficos";
+
+import { Container } from "@/layouts/Container";
 
 export const centros = [
   { id: 1, name: "Becerra S23" },
@@ -51,24 +53,9 @@ const data5 = [
   { name: "11:00", ppm: "0.005", pv: 4800, amt: 2181 },
 ];
 
-const dataPie = [
-  { name: "Centro A", value: 400 },
-  { name: "Centro B", value: 300 },
-  { name: "Centro C", value: 300 },
-  { name: "Centro D", value: 200 },
-];
-
-const dataArco = [
-  { name: 'Parte 1', value: 95 },
-  { name: 'Parte 2', value: 0 },
-  { name: 'Parte 3', value: 0 },
-  { name: 'Parte 4', value: 5 },
-];
-
-
 export default function Dashboard() {
   return (
-    <main className="w-full flex flex-col text-white gap-3">
+    <Container className="max-w-full flex flex-col gap-2">
       {/* Primera fila */}
       <div className="grid grid-cols-6 gap-2 rounded-2xl border-t border-black/90 w-full bg-neutral-950/90 backdrop-blur-3xl shadow shadow-neutral-700 p-2">
         <article className="flex flex-col justify-start  shadow shadow-neutral-800 rounded-s-xl p-1">
@@ -492,7 +479,6 @@ export default function Dashboard() {
                       <p className="text-xs text-neutral-400 ">01:50:12</p>
                     </td>
                   </tr>
-                 
                 </tbody>
               </table>
             </div>
@@ -505,7 +491,7 @@ export default function Dashboard() {
         <article>
           <Graficos data={data5} />
         </article>
-        <article >
+        <article>
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
             <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
               Balance de la Semana
@@ -561,13 +547,12 @@ export default function Dashboard() {
                       <p className="text-xs text-neutral-400 ">01:50:12</p>
                     </td>
                   </tr>
-                 
                 </tbody>
               </table>
             </div>
           </div>
         </article>
       </div>
-    </main>
+    </Container>
   );
 }

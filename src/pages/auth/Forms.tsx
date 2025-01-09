@@ -1,11 +1,17 @@
-
 "use client"
 
-import { Button, Form, TextField }  from "@/components/ui";
+import { Button, Form, TextField } from "@/components/ui";
+import { useNavigate } from "react-router";
 
 export function Forms() {
+  const navigate = useNavigate(); 
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault(); 
+    navigate("/"); 
+  }
+
   return (
-    <Form className="dark " onSubmit={() => {}}>
+    <Form className="dark" onSubmit={handleSubmit}>
       <TextField label="Correo Corporativo" type="email" isRequired className="mb-2" />
       <TextField label="Contraseña" type="password" isRequired className="mb-2" />
       <Button className="" type="submit">Acceder</Button>
