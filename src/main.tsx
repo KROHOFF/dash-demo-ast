@@ -7,6 +7,8 @@ import Sidebar from "./layouts/Sidebar.tsx";
 import Header from "./layouts/Header.tsx";
 import Background from "./layouts/Background.tsx";
 import Dashboard from "./pages/Dashboard.tsx";
+import animations from "@midudev/tailwind-animations";
+import Seguridad from "./pages/Seguridad.tsx";
 
 const AppLayout = () => {
   const location = useLocation();
@@ -24,6 +26,7 @@ const AppLayout = () => {
             <Route path="/" element={<Dashboard />} />
             <Route path="/login" element={<Login />} />
             <Route path="/biomasa" element={<Biomasa />} />
+            <Route path="/seguridad" element={<Seguridad />} />
           </Routes>
         </div>
       </main>

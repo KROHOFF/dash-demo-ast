@@ -15,7 +15,7 @@ import PropTypes from "prop-types";
 
 // Componente de gráfico de área (AreaChart)
 export const Graficos = ({ data }) => (
-  <ResponsiveContainer width="100%" height={223}>
+  <ResponsiveContainer width="100%" height={209}>
     <AreaChart data={data}>
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" />

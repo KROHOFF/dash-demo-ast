@@ -59,7 +59,7 @@ export default function LineCharts() {
   return (
     <LineChart
       width={1100}
-      height={250}
+      height={209}
       data={data}
       margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
     >

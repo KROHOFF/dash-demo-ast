@@ -2,41 +2,30 @@ import BarCharts from "@/components/charts/BarCharts";
 import LineCharts from "@/components/charts/LineCharts";
 import Hora from "@/components/Hora";
 import { Container } from "@/layouts/Container";
-import React from "react";
-import { RiCheckboxBlankCircleFill, RiMapPin2Line } from "react-icons/ri";
+import { RiCheckboxBlankCircleFill } from "react-icons/ri";
+import { Card, Grid } from "@/components/ui";
+import DatosGenerales from "@/layouts/data/DatosGenerales";
+import data from "@/layouts/data/DataGeneral";
 
 export default function Biomasa() {
   return (
     <Container className="min-h-screen w-full flex flex-col gap-2 inset-0 shadow shadow-neutral-800 rounded-3xl">
       <div className="w-full grid grid-cols-12 gap-1">
         <article className="col-span-2 bg-neutral-950 rounded-2xl flex flex-col justify-start  shadow shadow-neutral-800 rounded-s-xl p-1">
-          <div className="w-full grid grid-cols-2 border-b border-neutral-800 rounded-ss-lg">
-            <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
-              Datos Generales
-            </h2>
-            <p className="border-e pe-2 font-black border-green-400 text-xs text-green-400 capitalize flex gap-1 items-center justify-end">
-              <span className=" animate-pulse">
-                <RiCheckboxBlankCircleFill />
-              </span>
-              En Línea
-            </p>
-          </div>
-          <div className="flex flex-col gap-2 p-2">
-            <h3 className="text-center text-xs font-light text-neutral-300">
-              CENTRO
-            </h3>
-            <div className=" flex flex-col gap-4 justify-center items-center">
-              <p className="border-dashed border-2 border-red-500  text-sky-100 font-bold px-4 py-2 rounded-sm ">
-                BECERRA S23
-              </p>
-              <p className="flex items-center gap-1  text-xs">
-                <span>
-                  <RiMapPin2Line />
-                </span>
-                Chaitén
-              </p>
-            </div>
-          </div>
+          {data.map((item) => {
+            if (item.id === 1) {
+              return (
+                <DatosGenerales
+                  key={item.id}
+                  name={item.name}
+                  estado={item.estado}
+                  estadoColor={item.estadoColor}
+                  location={item.location}
+                />
+              );
+            }
+            return null; // Si no cumple la condición, no renderiza nada
+          })}
         </article>
         <article className="col-span-2 bg-neutral-950 rounded-2xl flex flex-col justify-start  shadow shadow-neutral-800  p-1">
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
@@ -45,21 +34,17 @@ export default function Biomasa() {
             </h2>
           </div>
           <div className="grid grid-cols-2 gap-2 h-full justify-center p-2">
-            <article className="border border-sky-500 flex flex-col justify-center items-center  rounded">
+            <article className="border border-sky-500 hover:bg-neutral-800 transition-all duration-200 flex flex-col justify-center items-center  rounded">
               <p className="text-sm text-neutral-400 font-bold">
                 Total Centros
               </p>
-              <p className=" text-2xl text-white-500 border border-dotted border-sky-500 rounded-xl px-3 mt-2">
-                7
-              </p>
+              <p className=" text-3xl text-white-500">7</p>
             </article>
-            <article className="border border-red-500 flex flex-col justify-center items-center  rounded">
+            <article className="border border-red-500 hover:bg-neutral-800 transition-all duration-200 flex flex-col justify-center items-center  rounded">
               <p className="text-sm text-neutral-400 font-bold">
                 Total Centros
               </p>
-              <p className=" text-2xl text-white-500 border border-dotted border-red-500 rounded-xl px-3 mt-2">
-                0
-              </p>
+              <p className=" text-3xl text-white-500">0</p>
             </article>
           </div>
         </article>
@@ -101,7 +86,7 @@ export default function Biomasa() {
                 Sfr Corregido Hoy %
               </p>
             </div>
-            <BarCharts/>
+            <BarCharts />
             <LineCharts />
           </div>
         </article>

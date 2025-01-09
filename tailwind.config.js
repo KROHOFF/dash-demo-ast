@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import { withTV } from 'tailwind-variants/transformer'
+import animations from '@midudev/tailwind-animations'
 
 const config = withTV({
   darkMode: ['class'],
@@ -95,7 +96,8 @@ const config = withTV({
   },
   plugins: [
     require('tailwindcss-animate'),
-    require('tailwindcss-react-aria-components')
+    require('tailwindcss-react-aria-components'),
+	animations
   ]
 })
 

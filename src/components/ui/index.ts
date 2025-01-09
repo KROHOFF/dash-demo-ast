@@ -8,6 +8,7 @@ export * from './dialog';
 export * from './dropdown';
 export * from './field';
 export * from './form';
+export * from './grid';
 export * from './heading';
 export * from './list-box';
 export * from './loader';
