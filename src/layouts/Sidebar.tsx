@@ -37,14 +37,18 @@ export default function Sidebar() {
         }
         onClick={toggle}
       >
-        {isOpen ?  <RiExpandLeftLine /> :  <RiExpandRightLine />}
+        {isOpen ? <RiExpandLeftLine /> : <RiExpandRightLine />}
       </button>
       <nav className="pt-5">
         <ul className="flex flex-col gap-8 text-2xl text-neutral-500 ps-4 pe-2">
           <li>
             <NavLink
               to="/"
-              className="flex justify-start items-center gap-2  transition-all text-[#ff6764] duration-500 hover:text-[#aa403e]"
+              className={({ isActive }) =>
+                isActive
+                  ? "active flex justify-start items-center gap-2  transition-all duration-500 hover:text-white"
+                  : `flex justify-start items-center gap-2  transition-all duration-500 hover:text-[#aa403e]`
+              }
               end
             >
               <RiGalleryView2 />
@@ -82,7 +86,7 @@ export default function Sidebar() {
               <RiRadarLine />
               {isOpen ? (
                 <span className="text-xs transition-all duration-500">
-                  Biomasa
+                  Clima
                 </span>
               ) : (
                 ""
@@ -98,7 +102,7 @@ export default function Sidebar() {
               <RiIncreaseDecreaseLine />
               {isOpen ? (
                 <span className="text-xs transition-all duration-500">
-                  Biomasa
+                  Seguridad
                 </span>
               ) : (
                 ""
@@ -114,7 +118,7 @@ export default function Sidebar() {
               <RiRainyLine />
               {isOpen ? (
                 <span className="text-xs transition-all duration-500">
-                  Biomasa
+                  Sensores IoT
                 </span>
               ) : (
                 ""
@@ -130,7 +134,7 @@ export default function Sidebar() {
               <RiSpamLine />
               {isOpen ? (
                 <span className="text-xs transition-all duration-500">
-                  Biomasa
+                  Energía
                 </span>
               ) : (
                 ""
@@ -146,7 +150,7 @@ export default function Sidebar() {
               <RiShieldLine />
               {isOpen ? (
                 <span className="text-xs transition-all duration-500">
-                  Biomasa
+                  Estado de Red
                 </span>
               ) : (
                 ""
@@ -162,7 +166,7 @@ export default function Sidebar() {
               <RiRobot2Line />
               {isOpen ? (
                 <span className="text-xs transition-all duration-500">
-                  Biomasa
+                  Alertas
                 </span>
               ) : (
                 ""
@@ -178,7 +182,7 @@ export default function Sidebar() {
               <RiAlertLine />
               {isOpen ? (
                 <span className="text-xs transition-all duration-500">
-                  Biomasa
+                  Sub Drone
                 </span>
               ) : (
                 ""
@@ -194,7 +198,7 @@ export default function Sidebar() {
               <RiSettings5Line />
               {isOpen ? (
                 <span className="text-xs transition-all duration-500">
-                  Biomasa
+                  Jaula Smart
                 </span>
               ) : (
                 ""

@@ -163,3 +163,7 @@
     @apply bg-background text-foreground;
     }
 }
+
+.active {
+  @apply text-white;
+}

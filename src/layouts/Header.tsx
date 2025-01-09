@@ -1,3 +1,4 @@
+import Hora from "@/components/Hora";
 import { RiAccountPinCircleLine } from "react-icons/ri";
 
 export default function Header() {
@@ -11,10 +12,10 @@ export default function Header() {
           <p className="text-xl font-bold text-neutral-400">
             <span className="font-light text-neutral-500">WI</span>SENSOR
           </p>
-          <p className="text-xs text-neutral-400 animate-pulse">22/02/2023 - 22:55.</p>
+          <Hora />
         </div>
         <div className="col-span-1 flex justify-end items-center pe-5">
-          <button className="bg-neutral-950/60 text-neutral-400 hover:text-white shadow transition-all duration-500 shadow-neutral-700 rounded-2xl flex justify-center items-center gap-2">
+          <button className="bg-neutral-950/60 text-neutral-400 px-2 py-2 text-sm hover:text-white shadow transition-all duration-500 shadow-neutral-700 rounded-2xl flex justify-center items-center gap-2">
             <RiAccountPinCircleLine /> Administrador AST
           </button>
         </div>

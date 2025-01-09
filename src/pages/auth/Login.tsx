@@ -3,7 +3,6 @@ import React from "react";
 import { Forms } from "./Forms";
 
 export default function Login() {
-
   return (
     <div className="relative flex  h-screen w-full max-h-screen ">
       <Background />
@@ -17,7 +16,10 @@ export default function Login() {
           <div className="absolute  bg-neutral-900/20  backdrop-blur-md w-full h-full "></div>
           <div className="absolute  bg-neutral-900/20 scale-95 backdrop-blur-3xl w-full h-full rounded-2xl flex flex-col justify-center items-center">
             <div className="flex flex-col justify-center items-center">
-              <p className="text-6xl font-bold text-neutral-400">
+              <div className="flex justify-center my-10 -mt-20">
+                <img className="h-14" src="logo.png" alt="Logo" />
+              </div>
+              <p className="text-6xl font-bold text-neutral-200">
                 <span className="font-light text-red-500">WI</span>SENSOR
               </p>
               <p className="text-white text-center text-xl font-light">
@@ -26,16 +28,12 @@ export default function Login() {
             </div>
           </div>
         </div>
-        <div className="w-2/3 flex flex-col">
-          <div className="flex justify-center my-20">
-            <img className="h-20" src="logo.png" alt="Logo" />
-          </div>
-          
-          <p className="text-neutral-400 text-center text-xs font-light mb-10">
+        <div className="w-2/3 flex flex-col justify-center">
+          <p className="text-neutral-400 text-center text-xs font-light mb-5">
             Ingresa tus credenciales para continuar
           </p>
-          <div className="z-20  mx-auto w-[300px]">
-            <Forms/>
+          <div className="z-20 mx-auto w-[300px] bg-neutral-950/50 h-96 shadow shadow-neutral-600 rounded-2xl p-10">
+            <Forms />
           </div>
         </div>
       </main>

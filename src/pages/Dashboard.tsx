@@ -5,6 +5,7 @@ import { RiMapPin2Line, RiCheckboxBlankCircleFill } from "react-icons/ri";
 import { Graficos } from "@/components/charts/Graficos";
 
 import { Container } from "@/layouts/Container";
+import LineCharts from "@/components/charts/LineCharts";
 
 export const centros = [
   { id: 1, name: "Becerra S23" },
@@ -57,7 +58,7 @@ export default function Dashboard() {
   return (
     <Container className="max-w-full flex flex-col gap-2">
       {/* Primera fila */}
-      <div className="grid grid-cols-6 gap-2 rounded-2xl border-t border-black/90 w-full bg-neutral-950/90 backdrop-blur-3xl shadow shadow-neutral-700 p-2">
+      <div className="grid grid-cols-6 gap-2 rounded-2xl border-t border-black/90 w-full bg-neutral-950 backdrop-blur-3xl shadow shadow-neutral-700 p-2">
         <article className="flex flex-col justify-start  shadow shadow-neutral-800 rounded-s-xl p-1">
           <div className="w-full grid grid-cols-2 border-b border-neutral-800 rounded-ss-lg">
             <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
@@ -484,13 +485,11 @@ export default function Dashboard() {
             </div>
           </div>
         </article>
-        <article className="">
+        <article className="col-span-2 overflow-hidden">
           {/* <GraficosPie data={dataPie} /> */}
-          <Graficos data={data} />
+          <LineCharts />
         </article>
-        <article>
-          <Graficos data={data5} />
-        </article>
+
         <article>
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
             <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
