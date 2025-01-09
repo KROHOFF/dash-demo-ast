@@ -1,103 +1,208 @@
+import { useState } from "react";
 import {
   RiGalleryView2,
   RiAlertLine,
   RiIncreaseDecreaseLine,
   RiRobot2Line,
   RiRadarLine,
-  RiWifiFill,
   RiRainyLine,
   RiSpamLine,
   RiShieldLine,
   RiSettings5Line,
+  RiExpandLeftLine,
+  RiExpandRightLine,
+  RiShipLine,
 } from "react-icons/ri";
+import { NavLink } from "react-router";
 
 export default function Sidebar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-    <aside className="flex flex-col justify-start items-center min-w-24 max-w-24">
-              <nav className="rounded-2xl py-10 w-full bg-neutral-950/60 shadow shadow-neutral-700">
-                <ul className="flex flex-col items-center gap-8 text-2xl text-neutral-500 ">
-                  <li>
-                    <a
-                      className="transition-all text-[#ff6764] duration-500 hover:text-[#aa403e]"
-                      href="#"
-                    >
-                      <RiGalleryView2 />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="transition-all duration-500 hover:text-white"
-                      href="#"
-                    >
-                      <RiWifiFill />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="transition-all duration-500 hover:text-white"
-                      href="#"
-                    >
-                      <RiRadarLine />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="transition-all duration-500 hover:text-white"
-                      href="#"
-                    >
-                      <RiIncreaseDecreaseLine />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="transition-all duration-500 hover:text-white"
-                      href="#"
-                    >
-                      <RiRainyLine />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="transition-all duration-500 hover:text-white"
-                      href="#"
-                    >
-                      <RiSpamLine />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="transition-all duration-500 hover:text-white"
-                      href="#"
-                    >
-                      <RiShieldLine />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="transition-all duration-500 hover:text-white"
-                      href="#"
-                    >
-                      <RiRobot2Line />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="transition-all duration-500 hover:text-white"
-                      href="#"
-                    >
-                      <RiAlertLine />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="transition-all duration-500 hover:text-white"
-                      href="#"
-                    >
-                      <RiSettings5Line />
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </aside>
-  )
+    <aside
+      className={
+        isOpen
+          ? "flex flex-col items-end bg-gradient-to-br from-neutral-800 pe-3 py-5 rounded-se-xl"
+          : "flex flex-col items-end py-5"
+      }
+    >
+      <button
+        className={
+          isOpen
+            ? "`flex items-center  text-neutral-500 hover:text-white rounded-2xl`"
+            : "`flex items-center  text-neutral-500 hover:text-white rounded-2xl`"
+        }
+        onClick={toggle}
+      >
+        {isOpen ?  <RiExpandLeftLine /> :  <RiExpandRightLine />}
+      </button>
+      <nav className="pt-5">
+        <ul className="flex flex-col gap-8 text-2xl text-neutral-500 ps-4 pe-2">
+          <li>
+            <NavLink
+              to="/"
+              className="flex justify-start items-center gap-2  transition-all text-[#ff6764] duration-500 hover:text-[#aa403e]"
+              end
+            >
+              <RiGalleryView2 />
+              {isOpen ? (
+                <span className="text-xs transition-all duration-500">
+                  Dashboard
+                </span>
+              ) : (
+                ""
+              )}
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/biomasa"
+              className="flex items-center gap-2 transition-all duration-500 hover:text-white"
+              end
+            >
+              <RiShipLine />
+              {isOpen ? (
+                <span className="text-xs transition-all duration-500">
+                  Biomasa
+                </span>
+              ) : (
+                ""
+              )}
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/radar"
+              className="flex items-center gap-2  transition-all duration-500 hover:text-white"
+              end
+            >
+              <RiRadarLine />
+              {isOpen ? (
+                <span className="text-xs transition-all duration-500">
+                  Biomasa
+                </span>
+              ) : (
+                ""
+              )}
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/increase-decrease"
+              className="flex items-center gap-2  transition-all duration-500 hover:text-white"
+              end
+            >
+              <RiIncreaseDecreaseLine />
+              {isOpen ? (
+                <span className="text-xs transition-all duration-500">
+                  Biomasa
+                </span>
+              ) : (
+                ""
+              )}
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/rainy"
+              className=" flex items-center gap-2  transition-all duration-500 hover:text-white"
+              end
+            >
+              <RiRainyLine />
+              {isOpen ? (
+                <span className="text-xs transition-all duration-500">
+                  Biomasa
+                </span>
+              ) : (
+                ""
+              )}
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/spam"
+              className="flex items-center gap-2  transition-all duration-500 hover:text-white"
+              end
+            >
+              <RiSpamLine />
+              {isOpen ? (
+                <span className="text-xs transition-all duration-500">
+                  Biomasa
+                </span>
+              ) : (
+                ""
+              )}
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/shield"
+              className="flex items-center gap-2  transition-all duration-500 hover:text-white"
+              end
+            >
+              <RiShieldLine />
+              {isOpen ? (
+                <span className="text-xs transition-all duration-500">
+                  Biomasa
+                </span>
+              ) : (
+                ""
+              )}
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/robot"
+              className="flex items-center gap-2  transition-all duration-500 hover:text-white"
+              end
+            >
+              <RiRobot2Line />
+              {isOpen ? (
+                <span className="text-xs transition-all duration-500">
+                  Biomasa
+                </span>
+              ) : (
+                ""
+              )}
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/alert"
+              className="flex items-center gap-2  transition-all duration-500 hover:text-white"
+              end
+            >
+              <RiAlertLine />
+              {isOpen ? (
+                <span className="text-xs transition-all duration-500">
+                  Biomasa
+                </span>
+              ) : (
+                ""
+              )}
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/login"
+              className="flex items-center gap-2  transition-all duration-500 hover:text-white"
+              end
+            >
+              <RiSettings5Line />
+              {isOpen ? (
+                <span className="text-xs transition-all duration-500">
+                  Biomasa
+                </span>
+              ) : (
+                ""
+              )}
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  );
 }

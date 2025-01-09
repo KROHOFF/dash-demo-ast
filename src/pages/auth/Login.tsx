@@ -3,6 +3,7 @@ import React from "react";
 import { Forms } from "./Forms";
 
 export default function Login() {
+
   return (
     <div className="relative flex  h-screen w-full max-h-screen ">
       <Background />
