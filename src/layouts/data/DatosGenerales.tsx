@@ -4,7 +4,7 @@ import { RiCheckboxBlankCircleFill, RiMapPin2Line } from "react-icons/ri";
 
 export default function DatosGenerales(props: any) {
   return (
-    <Card className="dark shadow shadow-neutral-800/70 border-t border-black/70 p-2">
+    <Card className="dark bg-neutral-900  shadow shadow-neutral-800/70 border-t border-black/70 p-2">
       <Card.Header className="p-0 border-b border-neutral-900 ps-5 font-black text-neutral-300 text-sm flex  flex-row justify-between items-center ">
         <h3 className="text-sm text-neutral-300 font-bold leading-tight">
           Datos Generales
@@ -20,9 +20,19 @@ export default function DatosGenerales(props: any) {
       </Card.Header>
       <Card.Content className="p-2">
         <div className="flex flex-col gap-2 ">
-          <h3 className="text-center text-xs font-bold text-red-500">CENTRO</h3>
-          <div className=" flex flex-col justify-center items-center">
-            <p className="border-dashed border-2 border-red-500  text-sky-100 font-bold px-4 py-2 rounded-sm ">
+          <h3
+            className={`text-center text-xs font-bold ${
+              props.tipo === "Empresa" ? "text-blue-500" : "text-red-500"
+            }`}
+          >
+            {props.tipo}
+          </h3>
+          <div className="flex flex-col justify-center items-center">
+            <p
+              className={`border-dashed border-2 ${
+                props.tipo === "Empresa" ? "border-blue-500" : "border-red-500"
+              } text-sky-100 font-bold px-4 py-2 rounded-sm`}
+            >
               {props.name}
             </p>
           </div>

@@ -3,7 +3,7 @@ import React from "react";
 
 export default function DatosJaula() {
   return (
-    <Card className="dark shadow shadow-neutral-800/70 border-t border-black/70 ">
+    <Card className="dark bg-neutral-900 shadow shadow-neutral-800/70 border-t border-black/70 ">
       <Card.Header className="p-1 flex flex-row justify-center w-full items-center">
         <h3 className="text-sm text-neutral-300 font-bold leading-tight">
           Información de la Jaula
