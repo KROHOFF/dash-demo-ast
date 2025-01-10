@@ -79,7 +79,7 @@ export default function Sidebar() {
               )}
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink
               to="/radar"
               className="flex items-center gap-2 transition-all duration-500 hover:text-white"
@@ -94,7 +94,7 @@ export default function Sidebar() {
                 </span>
               )}
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink
               to="/seguridad"
@@ -111,7 +111,7 @@ export default function Sidebar() {
               )}
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink
               to="/rainy"
               className="flex items-center gap-2 transition-all duration-500 hover:text-white"
@@ -190,11 +190,11 @@ export default function Sidebar() {
                 </span>
               )}
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink
               to="/login"
-              className="flex items-center gap-2 transition-all duration-500 hover:text-white"
+              className="flex items-center text-red-900 gap-2 transition-all duration-500 hover:text-red-500"
               end
             >
               <RiLogoutCircleLine />
