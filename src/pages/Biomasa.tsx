@@ -3,15 +3,21 @@ import LineCharts from "@/components/charts/LineCharts";
 import Hora from "@/components/Hora";
 import { Container } from "@/layouts/Container";
 import { RiCheckboxBlankCircleFill } from "react-icons/ri";
-import { Card, Grid } from "@/components/ui";
+import { Grid } from "@/components/ui";
 import DatosGenerales from "@/layouts/data/DatosGenerales";
 import data from "@/layouts/data/DataGeneral";
 
 export default function Biomasa() {
   return (
     <Container className="min-h-screen w-full flex flex-col gap-2 inset-0 shadow shadow-neutral-800 rounded-3xl">
-      <div className="w-full grid grid-cols-12 gap-1">
-        <article className="col-span-2 bg-neutral-950 rounded-2xl flex flex-col justify-start  shadow shadow-neutral-800 rounded-s-xl p-1">
+      <Grid
+        columns={12}
+        className=" rounded-2xl   w-full bg-neutral-950/90 shadow shadow-neutral-800 overflow-hidden"
+      >
+        <Grid.Item
+          colSpan={2}
+          className="bg-neutral-950 rounded-2xl flex flex-col justify-start  shadow shadow-neutral-800 rounded-s-xl p-1"
+        >
           {data.map((item) => {
             if (item.id === 1) {
               return (
@@ -26,8 +32,11 @@ export default function Biomasa() {
             }
             return null; // Si no cumple la condición, no renderiza nada
           })}
-        </article>
-        <article className="col-span-2 bg-neutral-950 rounded-2xl flex flex-col justify-start  shadow shadow-neutral-800  p-1">
+        </Grid.Item>
+        <Grid.Item
+          colSpan={2}
+          className="bg-neutral-950 rounded-2xl flex flex-col justify-start  shadow shadow-neutral-800  p-1"
+        >
           <div className="w-full grid grid-cols-1 border-b border-neutral-800">
             <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
               Estado Módulo
@@ -47,18 +56,27 @@ export default function Biomasa() {
               <p className=" text-3xl text-white-500">0</p>
             </article>
           </div>
-        </article>
-
-        <article className="col-span-6 bg-neutral-950 rounded-2xl w-full flex items-center justify-center  shadow shadow-neutral-800">
+        </Grid.Item>
+        <Grid.Item
+          colSpan={6}
+          className="bg-neutral-950 rounded-2xl w-full flex items-center justify-center  shadow shadow-neutral-800"
+        >
           <h1 className="text-7xl font-black font-mono text-neutral-700 text-center">
             SALMONES AUSTRAL
           </h1>
-        </article>
-        <article className="col-span-2 bg-neutral-950 rounded-2xl flex flex-col justify-center items-center  shadow shadow-neutral-800">
+        </Grid.Item>
+        <Grid.Item
+          colSpan={2}
+          className="bg-neutral-950 rounded-2xl flex flex-col justify-center items-center  shadow shadow-neutral-800"
+        >
           <Hora />
-        </article>
-      </div>
-      <div className="w-full grid grid-cols-12 gap-1">
+        </Grid.Item>
+      </Grid>
+      <Grid
+        columns={12}
+        gap={2}
+        className=" rounded-2xl w-full shadow shadow-neutral-800 overflow-hidden"
+      >
         <article className="col-span-8 bg-neutral-950 rounded-2xl flex flex-col justify-start  shadow shadow-neutral-800 rounded-s-xl p-1">
           <div className="w-full  border-b border-neutral-800 rounded-ss-lg">
             <h2 className="text-center font-bold text-sm py-1 text-neutral-300">
@@ -97,7 +115,7 @@ export default function Biomasa() {
             className="rounded-md object-cover h-full"
           />
         </article>
-      </div>
+      </Grid>
     </Container>
   );
 }

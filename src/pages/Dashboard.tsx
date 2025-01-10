@@ -59,7 +59,7 @@ const data5 = [
 
 export default function Dashboard() {
   return (
-    <Container>
+    <Container className="min-h-screen w-full flex flex-col gap-2 inset-0 shadow shadow-neutral-800 rounded-3xl">
       <Grid gap={1} className="w-full">
         <PrimeraFila />
         <SegundaFila />

@@ -8,9 +8,8 @@ import {
   RiRainyLine,
   RiSpamLine,
   RiShieldLine,
-  RiSettings5Line,
-  RiExpandLeftLine,
-  RiListUnordered,
+  RiFullscreenLine,
+  RiFullscreenExitLine,
   RiShipLine,
   RiLogoutCircleLine,
 } from "react-icons/ri";
@@ -25,33 +24,40 @@ export default function Sidebar() {
 
   return (
     <aside
-      className={`flex flex-col items-end py-5 transition-all duration-500 ease-in-out ${
+      className={`flex flex-col transition-all duration-100 ease-in ${
         isOpen
-          ? "w-40 opacity-100 bg-gradient-to-br from-neutral-800 pe-3 rounded-se-xl"
-          : "w-20 opacity-50"
+          ? "w-40 opacity-100 bg-gradient-to-br from-neutral-800  rounded-se-xl"
+          : "w-20 "
       }`}
     >
-      <button
-        className="flex items-center text-neutral-500 hover:text-white rounded-2xl"
-        onClick={toggle}
-      >
-        {isOpen ? <RiExpandLeftLine /> : <RiListUnordered />}
-      </button>
-      <nav className="pt-5">
-        <ul className="flex flex-col gap-8 text-2xl text-neutral-500 ps-4 pe-2">
+      <div className="relative flex justify-end px-4 border-b border-neutral-700">
+        <button
+          className={` my-4 cursor-pointer
+            ${
+              isOpen ? " text-white " : "mx-2"
+            } flex items-center text-neutral-500 hover:text-white rounded-2xl `}
+          onClick={toggle}
+        >
+          {isOpen ? <RiFullscreenExitLine /> : <RiFullscreenLine />}
+        </button>
+      </div>
+      <nav className="pt-5 ps-8">
+        <ul className="flex flex-col items-start justify-center gap-8 text-2xl text-neutral-500 ">
           <li>
             <NavLink
               to="/"
               className={({ isActive }) =>
                 isActive
                   ? "active flex justify-start items-center gap-2 transition-all duration-500 hover:text-white"
-                  : "flex justify-start items-center gap-2 transition-all duration-500 hover:text-[#aa403e]"
+                  : "flex justify-start items-center gap-2 transition-all duration-300 hover:text-[#aa403e]"
               }
               end
             >
               <RiGalleryView2 />
               {isOpen && (
-                <span className={`text-xs transition-all duration-300 animate-slide-in-left`}>
+                <span
+                  className={`text-xs transition-all duration-300 animate-slide-in-left`}
+                >
                   Dashboard
                 </span>
               )}
@@ -65,7 +71,9 @@ export default function Sidebar() {
             >
               <RiShipLine />
               {isOpen && (
-                <span className={`text-xs transition-all duration-300 animate-slide-in-left`}>
+                <span
+                  className={`text-xs transition-all duration-300 animate-slide-in-left`}
+                >
                   Biomasa
                 </span>
               )}
@@ -79,7 +87,9 @@ export default function Sidebar() {
             >
               <RiRainyLine />
               {isOpen && (
-                <span className={`text-xs transition-all duration-300 animate-slide-in-left`}>
+                <span
+                  className={`text-xs transition-all duration-300 animate-slide-in-left`}
+                >
                   Clima
                 </span>
               )}
@@ -93,7 +103,9 @@ export default function Sidebar() {
             >
               <RiShieldLine />
               {isOpen && (
-                <span className={`text-xs transition-all duration-300 animate-slide-in-left`}>
+                <span
+                  className={`text-xs transition-all duration-300 animate-slide-in-left`}
+                >
                   Seguridad
                 </span>
               )}
@@ -107,7 +119,9 @@ export default function Sidebar() {
             >
               <RiRadarLine />
               {isOpen && (
-                <span className={`text-xs transition-all duration-300 animate-slide-in-left`}>
+                <span
+                  className={`text-xs transition-all duration-300 animate-slide-in-left`}
+                >
                   Sensores IoT
                 </span>
               )}
@@ -121,7 +135,9 @@ export default function Sidebar() {
             >
               <RiSpamLine />
               {isOpen && (
-                <span className={`text-xs transition-all duration-300 animate-slide-in-left`}>
+                <span
+                  className={`text-xs transition-all duration-300 animate-slide-in-left`}
+                >
                   Energía
                 </span>
               )}
@@ -135,7 +151,9 @@ export default function Sidebar() {
             >
               <RiIncreaseDecreaseLine />
               {isOpen && (
-                <span className={`text-xs transition-all duration-300 animate-slide-in-left`}>
+                <span
+                  className={`text-xs transition-all duration-300 animate-slide-in-left`}
+                >
                   Estado de Red
                 </span>
               )}
@@ -149,7 +167,9 @@ export default function Sidebar() {
             >
               <RiRobot2Line />
               {isOpen && (
-                <span className={`text-xs transition-all duration-300 animate-slide-in-left`}>
+                <span
+                  className={`text-xs transition-all duration-300 animate-slide-in-left`}
+                >
                   Alertas
                 </span>
               )}
@@ -163,7 +183,9 @@ export default function Sidebar() {
             >
               <RiAlertLine />
               {isOpen && (
-                <span className={`text-xs transition-all duration-300 animate-slide-in-left`}>
+                <span
+                  className={`text-xs transition-all duration-300 animate-slide-in-left`}
+                >
                   Sub Drone
                 </span>
               )}
@@ -177,7 +199,9 @@ export default function Sidebar() {
             >
               <RiLogoutCircleLine />
               {isOpen && (
-                <span className={`text-xs transition-all duration-300 animate-slide-in-left`}>
+                <span
+                  className={`text-xs transition-all duration-300 animate-slide-in-left`}
+                >
                   Cerrar Sesión
                 </span>
               )}
