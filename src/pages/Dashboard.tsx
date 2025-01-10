@@ -88,6 +88,8 @@ function PrimeraFila() {
                 estado={item.estado}
                 estadoColor={item.estadoColor}
                 location={item.location}
+                color={item.color}
+                tipo={item.tipo}
               />
             );
           }
@@ -186,6 +188,7 @@ function PrimeraFila() {
                 estado={item.estado}
                 estadoColor={item.estadoColor}
                 location={item.location}
+                tipo={item.tipo}
               />
             );
           }
@@ -205,8 +208,12 @@ function SegundaFila() {
       <Grid.Item>
         <DatosJaula />
       </Grid.Item>
-      <Grid.Item><Graficos data={data3} /></Grid.Item>
-      <Grid.Item><Graficos data={data} /></Grid.Item>
+      <Grid.Item>
+        <Graficos data={data3} />
+      </Grid.Item>
+      <Grid.Item>
+        <Graficos data={data} />
+      </Grid.Item>
       <Grid.Item>
         <DatosJaula />
       </Grid.Item>

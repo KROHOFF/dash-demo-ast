@@ -27,6 +27,7 @@ export default function Biomasa() {
                   estado={item.estado}
                   estadoColor={item.estadoColor}
                   location={item.location}
+                  tipo={item.tipo}
                 />
               );
             }
