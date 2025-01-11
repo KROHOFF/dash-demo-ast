@@ -1,4 +1,3 @@
-'use client'
 
 import { ThemeProvider } from './theme-provider'
 import { useRouter } from 'next/navigation'

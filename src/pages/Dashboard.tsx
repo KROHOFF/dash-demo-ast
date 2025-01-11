@@ -1,4 +1,3 @@
-"use client";
 import { IconRefresh } from "justd-icons";
 import { Select, Checkbox, Button, Grid } from "@/components/ui";
 import { Graficos } from "@/components/charts/Graficos";

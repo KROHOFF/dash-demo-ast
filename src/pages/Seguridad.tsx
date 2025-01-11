@@ -2,9 +2,6 @@ import { Card, Grid } from "@/components/ui";
 import { Container } from "@/layouts/Container";
 import DatosGenerales from "@/layouts/data/DatosGenerales";
 import data from "@/layouts/data/DataGeneral";
-
-
-
 export default function Seguridad() {
   return (
     <Container className="min-h-screen w-full flex flex-col gap-2 inset-0 shadow shadow-neutral-800 rounded-3xl">
