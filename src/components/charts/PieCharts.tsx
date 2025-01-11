@@ -1,5 +1,3 @@
-import React from 'react'
-
 function PieCharts() {
   return (
     <div>PieCharts</div>

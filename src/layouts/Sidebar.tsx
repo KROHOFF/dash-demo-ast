@@ -5,7 +5,6 @@ import {
   RiIncreaseDecreaseLine,
   RiRobot2Line,
   RiRadarLine,
-  RiRainyLine,
   RiSpamLine,
   RiShieldLine,
   RiFullscreenLine,

@@ -1,5 +1,4 @@
 import { Card } from "@/components/ui";
-import React from "react";
 
 export default function DatosJaula() {
   return (

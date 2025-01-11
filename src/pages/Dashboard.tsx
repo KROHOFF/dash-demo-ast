@@ -1,7 +1,6 @@
 "use client";
 import { IconRefresh } from "justd-icons";
 import { Select, Checkbox, Button, Grid } from "@/components/ui";
-import { RiMapPin2Line, RiCheckboxBlankCircleFill } from "react-icons/ri";
 import { Graficos } from "@/components/charts/Graficos";
 import DatosGenerales from "@/layouts/data/DatosGenerales";
 import dataGeneral from "@/layouts/data/DataGeneral";

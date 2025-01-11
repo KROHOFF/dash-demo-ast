@@ -7,7 +7,6 @@ import Sidebar from "./layouts/Sidebar.tsx";
 import Header from "./layouts/Header.tsx";
 import Background from "./layouts/Background.tsx";
 import Dashboard from "./pages/Dashboard.tsx";
-import animations from "@midudev/tailwind-animations";
 import Seguridad from "./pages/Seguridad.tsx";
 
 const AppLayout = () => {

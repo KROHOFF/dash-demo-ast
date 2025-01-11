@@ -1,5 +1,4 @@
 import { Card } from "@/components/ui";
-import React, { useRef, useState } from 'react';
 import { RiCheckboxBlankCircleFill, RiMapPin2Line } from "react-icons/ri";
 
 export default function DatosGenerales(props: any) {

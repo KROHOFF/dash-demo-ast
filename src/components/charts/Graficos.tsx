@@ -1,4 +1,3 @@
-import React from "react";
 import {
   AreaChart,
   Area,
@@ -13,7 +12,6 @@ import {
 } from "recharts"; // Solo importa ResponsiveContainer una vez
 import PropTypes from "prop-types";
 
-// Componente de gráfico de área (AreaChart)
 export const Graficos = ({ data }) => (
   <ResponsiveContainer width="100%" height={209}>
     <AreaChart data={data}>
@@ -30,7 +28,6 @@ Graficos.propTypes = {
   data: PropTypes.array.isRequired, // Definimos que 'data' debe ser un array
 };
 
-// Componente de gráfico de pastel (PieChart)
 export const GraficosPie = ({ data }) => (
   <ResponsiveContainer width="100%" height={123}>
     {" "}
@@ -59,7 +56,6 @@ export const GraficosArcoiris = ({ data }) => (
   <ResponsiveContainer width="100%" height={223}>
     <AreaChart data={data}>
       <defs>
-        {/* Gradiente arcoiris: usando colores del arcoiris */}
         <linearGradient id="arcoiris" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#FF0000" stopOpacity={0.5} />
           <stop offset="100%" stopColor="#FF0000" stopOpacity={0} />
@@ -71,7 +67,6 @@ export const GraficosArcoiris = ({ data }) => (
       <YAxis />
       <Tooltip />
 
-      {/* Usamos el gradiente arcoiris para el gráfico de área */}
       <Area type="monotone" dataKey="ppm" stroke="#000" fill="#fff" />
     </AreaChart>
   </ResponsiveContainer>
@@ -82,7 +77,6 @@ GraficosArcoiris.propTypes = {
 };
 
 export const GraficosArcoCircular = ({ data }) => {
-  // Definir los colores del arcoiris
   const rainbowColors = [
     "#000", // Rojo
   ];

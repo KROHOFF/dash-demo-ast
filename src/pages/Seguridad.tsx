@@ -2,7 +2,6 @@ import { Card, Grid } from "@/components/ui";
 import { Container } from "@/layouts/Container";
 import DatosGenerales from "@/layouts/data/DatosGenerales";
 import data from "@/layouts/data/DataGeneral";
-import { RiCheckboxBlankCircleFill } from "react-icons/ri";
 
 
 
