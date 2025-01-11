@@ -12,7 +12,7 @@ import Seguridad from "./pages/Seguridad.tsx";
 const AppLayout = () => {
   const location = useLocation();
 
-  const isLoginPage = location.pathname === "/login";
+  const isLoginPage = location.pathname === "/login" || location.pathname === "/";
 
   return !isLoginPage ? (
     <div className="relative flex w-full inset-0">
