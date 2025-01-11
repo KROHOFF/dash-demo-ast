@@ -186,7 +186,6 @@ const Picker = ({ children, className, ...props }: PopoverProps) => {
 
 Popover.Primitive = PopoverPrimitive
 Popover.Trigger = Dialog.Trigger
-Popover.Close = Dialog.Close
 Popover.Content = Content
 Popover.Description = Dialog.Description
 Popover.Body = Body

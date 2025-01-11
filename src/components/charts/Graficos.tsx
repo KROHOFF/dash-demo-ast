@@ -1,115 +1,34 @@
+import React from "react";
 import {
-    AreaChart,
-    Area,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
-    ResponsiveContainer,
-    PieChart,
-    Pie,
-    Cell,
-  } from "recharts";
-  import PropTypes from "prop-types";
-  
-  type GraficosProps = {
-    data: { name: string; ppm: number }[];
-  };
-  
-  export const Graficos: React.FC<GraficosProps> = ({ data }) => (
-    <ResponsiveContainer width="100%" height={209}>
-      <AreaChart data={data}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Area type="monotone" dataKey="ppm" stroke="#0ea5e9" fill="#0955e9" />
-      </AreaChart>
-    </ResponsiveContainer>
-  );
-  
-  Graficos.propTypes = {
-    data: PropTypes.array.isRequired,
-  };
-  
-  export const GraficosPie: React.FC<GraficosProps> = ({ data }) => (
-    <ResponsiveContainer width="100%" height={123}>
-      <PieChart>
-        <Pie
-          data={data}
-          dataKey="value"
-          nameKey="name"
-          cx="50%"
-          cy="50%"
-          outerRadius="80%"
-          fill="#0ea5e9"
-          label
-        />
-        <Tooltip />
-      </PieChart>
-    </ResponsiveContainer>
-  );
-  
-  GraficosPie.propTypes = {
-    data: PropTypes.array.isRequired,
-  };
-  
-  export const GraficosArcoiris: React.FC<GraficosProps> = ({ data }) => (
-    <ResponsiveContainer width="100%" height={223}>
-      <AreaChart data={data}>
-        <defs>
-          <linearGradient id="arcoiris" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#FF0000" stopOpacity={0.5} />
-            <stop offset="100%" stopColor="#FF0000" stopOpacity={0} />
-          </linearGradient>
-        </defs>
-  
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-  
-        <Area type="monotone" dataKey="ppm" stroke="#000" fill="#fff" />
-      </AreaChart>
-    </ResponsiveContainer>
-  );
-  
-  GraficosArcoiris.propTypes = {
-    data: PropTypes.array.isRequired,
-  };
-  
-  export const GraficosArcoCircular: React.FC<GraficosProps> = ({ data }) => {
-    const rainbowColors = ["#000"];
-  
-    return (
-      <ResponsiveContainer width="100%" height={223}>
-        <PieChart>
-          <Pie
-            data={data}
-            dataKey="value"
-            nameKey="name"
-            cx="50%"
-            cy="50%"
-            innerRadius="67%"
-            outerRadius="80%"
-            startAngle={0}
-            endAngle={130}
-            paddingAngle={19}
-            isAnimationActive={true}
-          >
-            {data.map((entry, index) => (
-              <Cell
-                key={`cell-${index}`}
-                fill={rainbowColors[index % rainbowColors.length]}
-              />
-            ))}
-          </Pie>
-        </PieChart>
-      </ResponsiveContainer>
-    );
-  };
-  
-  GraficosArcoCircular.propTypes = {
-    data: PropTypes.array.isRequired,
-  };
-  
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
+
+// Definir la interfaz para el tipo de los datos
+interface DataPoint {
+  name: string;
+  ppm: number;
+}
+
+// Declarar el tipo de las props del componente
+interface GraficosProps {
+  data: DataPoint[];  // data debe ser un arreglo de objetos con propiedades name (string) y ppm (number)
+}
+
+// Componente Graficos
+export const Graficos: React.FC<GraficosProps> = ({ data }) => (
+  <ResponsiveContainer width="100%" height={209}>
+    <AreaChart data={data}>
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis dataKey="name" />
+      <YAxis />
+      <Tooltip />
+      <Area type="monotone" dataKey="ppm" stroke="#0ea5e9" fill="#0955e9" />
+    </AreaChart>
+  </ResponsiveContainer>
+);

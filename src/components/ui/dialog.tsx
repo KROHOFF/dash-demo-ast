@@ -10,11 +10,9 @@ import {
   Button as ButtonPrimitive,
   Dialog as DialogPrimitive,
   Heading,
-  OverlayTriggerStateContext
 } from "react-aria-components"
 import { tv } from "tailwind-variants"
 
-import { Button, type ButtonProps } from "./button"
 import { useMediaQuery } from "./primitive"
 
 const dialogStyles = tv({

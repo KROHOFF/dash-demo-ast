@@ -46,7 +46,6 @@ export function Chartone() {
               tickMargin={8}
               tickFormatter={(value) => value.slice(0, 3)}
             />
-            <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="line" />} />
             <Area
               dataKey="revenue"
               type="natural"

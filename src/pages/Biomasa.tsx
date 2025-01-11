@@ -1,4 +1,3 @@
-import BarCharts from "@/components/charts/BarCharts";
 import LineCharts from "@/components/charts/LineCharts";
 import Hora from "@/components/Hora";
 import { Container } from "@/layouts/Container";
@@ -105,7 +104,6 @@ export default function Biomasa() {
                 Sfr Corregido Hoy %
               </p>
             </div>
-            <BarCharts />
             <LineCharts />
           </div>
         </article>

@@ -6,7 +6,6 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
-import PropTypes from "prop-types";
 
 export default function BarCharts() {
   const data = [
@@ -115,6 +114,4 @@ export default function BarCharts() {
   );
 }
 
-BarCharts.propTypes = {
-  data: PropTypes.array.isRequired,
-};
+

@@ -37,7 +37,7 @@ const AppLayout = () => {
 
 const root = document.getElementById("root");
 
-ReactDOM.createRoot(root).render(
+ReactDOM.createRoot(root as HTMLElement).render(
   <BrowserRouter>
     <AppLayout />
   </BrowserRouter>
