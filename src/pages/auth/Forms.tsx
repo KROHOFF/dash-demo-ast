@@ -5,7 +5,7 @@ export function Forms() {
   const navigate = useNavigate();
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    navigate("/");
+    navigate("/dashboard");
   };
 
   return (

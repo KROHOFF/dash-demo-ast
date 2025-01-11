@@ -44,7 +44,7 @@ export default function Sidebar() {
         <ul className="flex flex-col items-start justify-center gap-8 text-2xl text-neutral-500 ">
           <li>
             <NavLink
-              to="/"
+              to="/dashboard"
               className={({ isActive }) =>
                 isActive
                   ? "active flex justify-start items-center gap-2 transition-all duration-500 hover:text-white"
@@ -112,7 +112,7 @@ export default function Sidebar() {
           </li>
           <li>
             <NavLink
-              to="/rainy"
+              to="/"
               className="flex items-center gap-2 transition-all duration-500 hover:text-white"
               end
             >
@@ -128,7 +128,7 @@ export default function Sidebar() {
           </li>
           <li>
             <NavLink
-              to="/spam"
+              to="/"
               className="flex items-center gap-2 transition-all duration-500 hover:text-white"
               end
             >
@@ -144,7 +144,7 @@ export default function Sidebar() {
           </li>
           <li>
             <NavLink
-              to="/shield"
+              to="/"
               className="flex items-center gap-2 transition-all duration-500 hover:text-white"
               end
             >
@@ -160,7 +160,7 @@ export default function Sidebar() {
           </li>
           <li>
             <NavLink
-              to="/robot"
+              to="/"
               className="flex items-center gap-2 transition-all duration-500 hover:text-white"
               end
             >
@@ -176,7 +176,7 @@ export default function Sidebar() {
           </li>
           <li>
             <NavLink
-              to="/alert"
+              to="/"
               className="flex items-center gap-2 transition-all duration-500 hover:text-white"
               end
             >

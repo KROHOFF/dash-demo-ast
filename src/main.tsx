@@ -22,8 +22,9 @@ const AppLayout = () => {
         <div className="relative flex flex-row gap-2 justify-center items-stretch w-full">
           <Sidebar />
           <Routes>
-            <Route path="/" element={<Dashboard />} />
+            <Route path="/" element={<Login />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/biomasa" element={<Biomasa />} />
             <Route path="/seguridad" element={<Seguridad />} />
           </Routes>
