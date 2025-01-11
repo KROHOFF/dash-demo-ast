@@ -1,4 +1,3 @@
-import * as React from "react"
 
 import { cn } from "@/utils/classes"
 import { ProgressBar, type ProgressBarProps } from "react-aria-components"

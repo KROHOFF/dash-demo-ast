@@ -143,17 +143,7 @@ const Footer = ({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) =
   )
 }
 
-const Close = ({ className, appearance = "outline", ...props }: ButtonProps) => {
-  const state = React.useContext(OverlayTriggerStateContext)!
-  return (
-    <Button
-      className={className}
-      appearance={appearance}
-      onPress={() => state.close()}
-      {...props}
-    />
-  )
-}
+
 
 interface CloseButtonIndicatorProps {
   className?: string
@@ -189,7 +179,6 @@ Dialog.Title = Title
 Dialog.Description = Description
 Dialog.Body = Body
 Dialog.Footer = Footer
-Dialog.Close = Close
 Dialog.CloseIndicator = CloseIndicator
 
 export { Dialog }

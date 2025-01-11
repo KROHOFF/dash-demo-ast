@@ -24,34 +24,12 @@ const data = [
   { name: "10:00", ppm: "0.002", pv: 3908, amt: 2000 },
   { name: "11:00", ppm: "0.002", pv: 4800, amt: 2181 },
 ];
-const data2 = [
-  { name: "07:00", ppm: "0.002", pv: 2400, amt: 2400 },
-  { name: "08:00", ppm: "0.002", pv: 1398, amt: 2210 },
-  { name: "09:00", ppm: "0.003", pv: 9800, amt: 2290 },
-  { name: "10:00", ppm: "0.002", pv: 3908, amt: 2000 },
-  { name: "11:00", ppm: "0.005", pv: 4800, amt: 2181 },
-];
 
 const data3 = [
   { name: "07:00", ppm: "0.001", pv: 2400, amt: 2400 },
   { name: "08:00", ppm: "0.005", pv: 1398, amt: 2210 },
   { name: "09:00", ppm: "0.003", pv: 9800, amt: 2290 },
   { name: "10:00", ppm: "0.007", pv: 3908, amt: 2000 },
-  { name: "11:00", ppm: "0.005", pv: 4800, amt: 2181 },
-];
-const data4 = [
-  { name: "07:00", ppm: "0.009", pv: 2400, amt: 2400 },
-  { name: "08:00", ppm: "0.002", pv: 1398, amt: 2210 },
-  { name: "09:00", ppm: "0.005", pv: 9800, amt: 2290 },
-  { name: "10:00", ppm: "0.007", pv: 3908, amt: 2000 },
-  { name: "11:00", ppm: "0.005", pv: 4800, amt: 2181 },
-];
-
-const data5 = [
-  { name: "07:00", ppm: "0.000", pv: 2400, amt: 2400 },
-  { name: "08:00", ppm: "0.000", pv: 1398, amt: 2210 },
-  { name: "09:00", ppm: "0.006", pv: 9800, amt: 2290 },
-  { name: "10:00", ppm: "0.001", pv: 3908, amt: 2000 },
   { name: "11:00", ppm: "0.005", pv: 4800, amt: 2181 },
 ];
 
@@ -86,7 +64,6 @@ function PrimeraFila() {
                 estado={item.estado}
                 estadoColor={item.estadoColor}
                 location={item.location}
-                color={item.color}
                 tipo={item.tipo}
               />
             );
