@@ -98,6 +98,7 @@ const config = withTV({
     require("tailwindcss-animate"),
     require("tailwindcss-react-aria-components"),
     animations,
+    
   ],
 });
 

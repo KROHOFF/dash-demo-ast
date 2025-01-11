@@ -4,6 +4,8 @@ import DatosGenerales from "@/layouts/data/DatosGenerales";
 import data from "@/layouts/data/DataGeneral";
 import { RiCheckboxBlankCircleFill } from "react-icons/ri";
 
+
+
 export default function Seguridad() {
   return (
     <Container className="min-h-screen w-full flex flex-col gap-2 inset-0 shadow shadow-neutral-800 rounded-3xl">
@@ -36,6 +38,9 @@ export default function Seguridad() {
                 Tipo de Alerta Ultima Hora
               </h3>
             </Card.Header>
+            <Card.Content className="p-2">
+              
+            </Card.Content>
           </Card>
         </Grid.Item>
       </Grid>
