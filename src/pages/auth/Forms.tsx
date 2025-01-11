@@ -1,5 +1,3 @@
-"use client";
-
 import { Button, Form, TextField } from "@/components/ui";
 import { useNavigate } from "react-router";
 

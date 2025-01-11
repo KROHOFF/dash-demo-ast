@@ -1,5 +1,4 @@
 import Background from "@/layouts/Background";
-import React from "react";
 import { Forms } from "./Forms";
 import { RiAppStoreLine, RiGooglePlayLine } from "react-icons/ri";
 
